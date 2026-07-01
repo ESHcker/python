@@ -36,6 +36,16 @@ def test_invert_matrix():
     #Limit cases
     assert solver.invert_matrix(np.array([])) == "Cant be inverted"
 
+def test_eigenvalue_matrix():
+    #Normal cases
+    assert np.allclose(solver.eigenvalue_matrix(np.array([[1,3], [2,7]])), np.array([0.12701665, 7.87298335])) == True
+    assert solver.eigenvalue_matrix(np.array([[4,5,-1], [-1,3,2]])) == "Must be a square"
+
+    #Limit cases
+    assert solver.eigenvalue_matrix(np.array([])) == "Must be a square"
+
+
+
 
   
     
