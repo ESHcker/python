@@ -1,4 +1,6 @@
 import numpy as np
+from numpy.linalg import inv
+from numpy.linalg import det
 
 def add_matrices(matrix1, matrix2):  
     return matrix1 + matrix2
@@ -8,6 +10,14 @@ def subtract_matrices(matrix1, matrix2):
 
 def multiplication_matrices(matrix1, matrix2):
     return matrix1 * matrix2
+
+def invert_matrix(matrix):
+    try:
+        return inv(matrix)
+    except np.linalg.LinAlgError:
+        return f"Cant be inverted"
+            
+    
 
 if __name__ == "__main__":
     print("Demo of the package:") 
