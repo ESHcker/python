@@ -11,6 +11,17 @@ def test_add_matrices():
     #Limit cases
     assert np.array_equal(solver.add_matrices(np.array([]), np.array([])), np.array([])) == True
     assert np.array_equal(solver.add_matrices(np.array([1]), np.array([])), np.array([])) == True
+
+def test_subtract_matrices():
+    #Normal cases
+    assert np.array_equal(solver.subtract_matrices(np.array([11,22,34,58]), np.array([10,23,47,71])), np.array([1,-1,-13,-13])) == True
+    assert np.array_equal(solver.subtract_matrices(np.array([1,2,3]), np.array([1,2,3])), np.array([0,0,0])) == True
+    assert np.array_equal(solver.subtract_matrices(np.array([4,3]), np.array([1,2])), np.array([3,1])) == True
+    assert np.array_equal(solver.subtract_matrices(np.array([8]), np.array([1])), np.array([7])) == True
+
+    #Limit cases
+    assert np.array_equal(solver.subtract_matrices(np.array([]), np.array([])), np.array([])) == True
+    assert np.array_equal(solver.subtract_matrices(np.array([1]), np.array([])), np.array([])) == True
     
 
 
