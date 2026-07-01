@@ -7,7 +7,7 @@ def subtract_matrices(matrix1, matrix2):
     return matrix1 - matrix2
 
 def multiplication_matrices(matrix1, matrix2):
-    return matrix * matrix2
+    return matrix1 * matrix2
 
 if __name__ == "__main__":
     print("Demo of the package:") 
