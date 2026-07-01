@@ -2,10 +2,16 @@ import matrices_operations as solver
 import numpy as np
 
 def test_add_matrices():
-    array_to_add1 = np.array([1,2,3])
-    array_to_add2 = np.array([1,2,3])
+    #Normal cases
+    assert np.array_equal(solver.add_matrices(np.array([11,22,34,58]), np.array([10,23,47,71])), np.array([21,45,81,129])) == True
+    assert np.array_equal(solver.add_matrices(np.array([1,2,3]), np.array([1,2,3])), np.array([2,4,6])) == True
+    assert np.array_equal(solver.add_matrices(np.array([1,2]), np.array([1,2])), np.array([2,4])) == True
+    assert np.array_equal(solver.add_matrices(np.array([1]), np.array([1])), np.array([2])) == True
 
-    result = solver.add_matrices(array_to_add1, array_to_add2)
-    correct_result = np.array([2,4,6])
+    #Limit cases
+    assert np.array_equal(solver.add_matrices(np.array([]), np.array([])), np.array([])) == True
+    assert np.array_equal(solver.add_matrices(np.array([1]), np.array([])), np.array([])) == True
+    
 
-    assert np.array_equal(result, correct_result) == True
+
+
