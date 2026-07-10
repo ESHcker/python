@@ -1,2 +1,2 @@
 # python
-Repository where contains projects and exercises using python
+Repository containing projects and exercises using python
